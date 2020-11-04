@@ -1,4 +1,4 @@
-# exodusWebScraping
+# **exodusWebScraping**
 Web scrap de atributos de seguridad de aplicaciones Android obtenidas del sitio <a href = "https://exodus-privacy.eu.org/en/">Exodus-Privacy</a>.
 
 ## Descripción
@@ -54,8 +54,8 @@ Los siguientes parámetros del script son constantes de configuración que se pu
 ## Estructura del dataset
 El dataset está estructurado en un fichero de formato Json con la siguiente estructura de atributos de sus elementos:  
 {  
-    'Id' : id, *Número entero identificador de la aplicación*  
-    'Name' : “nombre”, *Texto con el nombre de la aplicación*  
+  'Id' : id, *Número entero identificador de la aplicación*  
+  'Name' : “nombre”, *Texto con el nombre de la aplicación*  
   'Tracker_count' : cuenta_rastreadores, *Numérico con el número de rastreadores incrustados en la app*  
   'Permissions_count' : cuenta_permisos, *Numérico con el número de permisos solicitados en la app*  
   'Version' : 'versión', *Texto con el versionado de la aplicación*  

@@ -1,12 +1,12 @@
 # **exodusWebScraping**
-Web scrap de atributos de seguridad de aplicaciones Android obtenidas del sitio <a href = "https://exodus-privacy.eu.org/en/">Exodus-Privacy</a>.
+Tratamiento de la privacidad del usuario por parte de las aplicaciones móviles.
 
 ## Descripción
 Con motivos académicos para el Máster en Ciencia de Datos de la UOC, se realiza el proyecto de extracción de información mediante técnicas de Web Scraping sobre el sitio web Exodus-Privacy dedicado a analizar aspectos de seguridad y privacidad en aplicaciones Android. Este proyecto, comparte el dataset obtenido y el script de Python utilizado para la extracción de información.
 
 ## Código fuente y recursos
 * **src/exodusWS.py**: Script de python con el programa principal y métodos utilizados para el rastreo.
-* **data/exodus.json**: Dataset obtenido a fecha 05/11/2020.
+* **data/exodus.json**: Dataset obtenido a fecha 07/11/2020.
 * **rsc/M.2851_PRA1_luimoco.pdf**: Informe de respuesta a los objetivos demandados en la práctica.
 * **rsc/Consideraciones Teóricas User-Agents.pdf**: Documento de análisis de requisitos de un buen user-agent recopilados del libro de texto.
 * **rsc/Análisis Exodus User-Agent.pdf**: Documento de análisis del rastreador.

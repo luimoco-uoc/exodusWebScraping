@@ -78,7 +78,7 @@ El dataset contiene **153373 filas** y **13 atributos**.
 
 ## Referencias
 1. **Subirats L., Calvo, M.** (2019) *Web scraping*. FUOC
-2. **Lawson R.** (2015) *Web Scraping with Python). Packt Publishing.
+2. **Lawson R.** (2015) *Web Scraping with Python*. Packt Publishing.
 3. **Gutiérrez T.** (2017) *Web-scraping-aviation-accidents*. GitHub tteguayco. Online en: https://github.com/tteguayco/Web-scraping-aviation-accidents. Visitado 17/10/2020
 4. **Honrado R.** (2017) *Extract prices for several foods of MINAGRI webpage*. GitHub rafoelhonrado. Online en: https://github.com/rafoelhonrado/foodPriceScraper. Visitado 17/10/2020
 5. **GitHub** (2020) *Hello World*. Github Guides. Online en: https://guides.github.com/activities/hello-world/. Visitado 06/10/2020

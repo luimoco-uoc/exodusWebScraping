@@ -56,7 +56,8 @@ Los siguientes parámetros del script son constantes de configuración que se pu
     * **'ESPERA_CORRECTA_INCIDENCIAS'**:10 > Segundos de espera si el serivdor devuelve un código html de servicio correcto con incidencias 201~300.
     
 ## Estructura del dataset
-El dataset está estructurado en un fichero de formato Json con la siguiente estructura de atributos de sus elementos:  
+El dataset está estructurado en un fichero de formato Json con la siguiente estructura de atributos de sus elementos:
+~~~
 {  
   'Id' : id, *Número entero identificador de la aplicación*  
   'Name' : “nombre”, *Texto con el nombre de la aplicación*  
@@ -72,7 +73,7 @@ El dataset está estructurado en un fichero de formato Json con la siguiente est
   'Developer' : 'desarrollador' *Texto con el nombre del desarrollador de la app*  
   'Icon' : [[RGBA]] *Opcional: Codificación del icono en 32x32 componentes con la información RGBA en bytes del pixel correspondiente. Si se solicita la generación del dataset sin iconos, éstos se guardarán externamente en un fichero PNG con nombre Id*  
 }
-
+~~~
 El dataset contiene **1153373 filas** y **13 atributos**.
 
 ## Referencias

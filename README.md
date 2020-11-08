@@ -74,7 +74,7 @@ El dataset está estructurado en un fichero de formato Json con la siguiente est
   'Icon' : [[RGBA]] *Opcional: Codificación del icono en 32x32 componentes con la información RGBA en bytes del pixel correspondiente. Si se solicita la generación del dataset sin iconos, éstos se guardarán externamente en un fichero PNG con nombre Id*  
 }
 ~~~
-El dataset contiene **1153373 filas** y **13 atributos**.
+El dataset contiene **153373 filas** y **13 atributos**.
 
 ## Referencias
 1. **Subirats L., Calvo, M.** (2019) *Web scraping*. FUOC

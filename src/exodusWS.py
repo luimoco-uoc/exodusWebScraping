@@ -17,7 +17,7 @@ def cargarElementosTratados(rutaDataSet):
   
     @author: luimoco
 
-    Entrada:  rutaDataSet: Se establece la ruta del entorno de ejecución donde está almacenado el Json con el dataset actual
+    Entrada:  rutaDataSet: Se establece la ruta del entorno de ejecución donde está almacenado el Json con el dataset actual.
 
     Salida: data_dict: La información completa de todos los elementos tratados, para poder añadir los elmeentos tratados en la sesión.
             data_list: La lista de los Id ya tratados, para que el proceso no los rastree en la sesión.

@@ -9,7 +9,7 @@ Con motivos académicos para el Máster en Ciencia de Datos de la UOC, se realiz
 
 ## Código fuente y recursos
 * **src/exodusWS.py**: Script de python con el programa principal y métodos utilizados para el rastreo.
-* **data/exodus.json**: Dataset obtenido a fecha 07/11/2020.
+* **data/exodus.json**: Dataset obtenido a fecha 05/11/2020.
 * **rsc/M.2851_PRA1_luimoco.pdf**: Informe de respuesta a los objetivos demandados en la práctica.
 * **rsc/Consideraciones Teóricas User-Agents.pdf**: Documento de análisis de requisitos de un buen user-agent recopilados del libro de texto.
 * **rsc/Análisis Exodus User-Agent.pdf**: Documento de análisis del rastreador.
@@ -30,21 +30,22 @@ import numpy as np
 
 ### Ejecución:
 ~~~
-python exodusWS.py --inicio @inicio --limite @limite
+python exodusWS.py IN_inicio IN_limite IN_iconoAFichero
 ~~~
 Donde:
-* **@inicio**: Entero de 1 a n que indica al rastreador en qué página de informe de aplicación comenzar https://reports.exodus-privacy.eu.org/es/reports/1/
-* **@limite**: Entero positivo que indica al rastreador cuántas páginas de informes de aplicaciones tratar.
+* **IN_inicio**: Entero de 1 a n que indica al rastreador en qué página de informe de aplicación comenzar https://reports.exodus-privacy.eu.org/es/reports/1/
+* **IN_limite**: Entero positivo que indica al rastreador cuántas páginas de informes de aplicaciones tratar.
+* **IN_iconoAFichero**: Booleano (True | False) que indica al rastreador si contener el atributo icono en el fichero del dataset mediante una lista de componentes RGBA o extraer los iconos a ficheros PNG nombrados con el identificador de la aplicacion.
 
 ### Salida:
 La ejecución del proceso obtiene como resultado la creacion o modificación y creación de tres ficheros:
-* **exodus.json**: Fichero acumulativo donde se almacena el dataset en formato json. Si es la primera ejecución se crea. Si ya existe, el proceso lee las aplicaciones rastreadas y solamente vuelve a rastrear las nuevas dentro del rango fijado en los parámetros del procedimiento.
-* **exodus_inicio_fin.json**: Se crea el fichero con el dataset resultado de la ejecución concreta.
+* **exodus.json**, **exodusNoIcon.json**: Fichero acumulativo donde se almacena el dataset en formato json. Si es la primera ejecución se crea. Si ya existe, el proceso lee las aplicaciones rastreadas y solamente vuelve a rastrear las nuevas dentro del rango fijado en los parámetros del procedimiento. El script actuará sobre uno u otro fichero según se indique en el parámetro IN_iconoAFichero.
 * **incidencias_inicio_fin.json**: Se recoge el log de incidencias acontecidas durante el proceso de rastreo para afinar el script.
 
 ### Configuración:
 Los siguientes parámetros del script son constantes de configuración que se pueden modificar en el propio script:
-* **MAX_REINTENTOS** = 3: Número de reintentos sobre la misma página en errores no fatales antes de pasar a la siguiente aplicación.
+* **MAX_REINTENTOS** = 10: Número de reintentos sobre la misma página en errores no fatales antes de pasar a la siguiente página de aplicación.
+* **MAX_REINTENTOS_404** = 3: Sucesión de páginas de aplicaciones con error 404 permitidas antes de parar el proceso de rastreo. Útil como criterio de parada del rastreador si alcanza el final de páginas de informes actualmente en el sitio web, para evitar trampas de araña.
 * **TOLERANCIA_ERRORES** = 3: Número de atributos máximo que podrán quedar sin informar *na* por errores o ausencia de la información en el rastreo de la página de informe de la aplicación. Si se supera, no se adjunta el elemento al dataset.
 * **MOTIVOS** (en función gestionarTiempos): Se trata de un diccionario de constantes con el número de segundos a esperar según ciertas situaciones que pueden producirse:
     * **'ESPERA_ESTANDAR'**:3 > Segundos de cortesía entre peticiones Request a páginas para no satuar el servidor.
@@ -69,5 +70,7 @@ El dataset está estructurado en un fichero de formato Json con la siguiente est
   'Permissions_warning_count' : cuenta_permisos_críticos *Número de permisos considerados críticos para salvaguardar la privacidad que requiere la app*  
   'Country' : 'país' *Código textual del país del desarrollador de la app*  
   'Developer' : 'desarrollador' *Texto con el nombre del desarrollador de la app*  
-  'Icon' : “[[RGBA]]” *Codificación del icono en 32x32 componentes con la información RGBA en bytes del pixel correspondiente*  
+  'Icon' : [[RGBA]] *Opcional: Codificación del icono en 32x32 componentes con la información RGBA en bytes del pixel correspondiente. Si se solicita la generación del dataset sin iconos, éstos se guardarán externamente en un fichero PNG con nombre Id*  
 }
+
+El dataset contiene **1153373 filas** y **13 atributos**.

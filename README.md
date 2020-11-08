@@ -1,6 +1,6 @@
 # **exodusWebScraping**
 Dataset del tratamiento de la privacidad del usuario por parte de las aplicaciones móviles.
-<iframe src="https://drive.google.com/file/d/1FIa0sku2-OHhJUHkN-f7mv3COcrAfE2N/preview" width="640" height="480"></iframe>
+<img src="https://lh3.google.com/u/0/d/1FIa0sku2-OHhJUHkN-f7mv3COcrAfE2N=w320-h200-k-iv1" alt="exodusWS.jpg">
 
 ## Descripción
 Con motivos académicos para el Máster en Ciencia de Datos de la UOC, se realiza el proyecto de extracción de información mediante técnicas de Web Scraping sobre el sitio web <a href = "https://exodus-privacy.eu.org/en/">Exodus-Privacy</a> dedicado a analizar aspectos de seguridad y privacidad en aplicaciones Android. El dataset *Tratamiento de la privacidad del usuario por parte de aplicaciones móviles*, proporciona información de rastreadores que se han incluido en la aplicación y los permisos del dispositivo que ha de aceptar el usuario en el momento de su instalación. Adicionalmente proporciona más características de la aplicación interesantes para el tratamiento analítico de aplicaciones móviles.

@@ -9,7 +9,7 @@ Con motivos académicos para el Máster en Ciencia de Datos de la UOC, se realiz
 
 ## Código fuente y recursos
 * **src/exodusWS.py**: Script de python con el programa principal y métodos utilizados para el rastreo.
-* **data/exodus.json**: Dataset obtenido a fecha 05/11/2020.
+* **data/exodus.html**: Enlaces para obtener los datasets exodus.zip y exodusNoIcon.zip obtenidos a fecha 08/11/2020.
 * **rsc/M.2851_PRA1_luimoco.pdf**: Informe de respuesta a los objetivos demandados en la práctica.
 * **rsc/Consideraciones Teóricas User-Agents.pdf**: Documento de análisis de requisitos de un buen user-agent recopilados del libro de texto.
 * **rsc/Análisis Exodus User-Agent.pdf**: Documento de análisis del rastreador.
